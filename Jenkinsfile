@@ -25,12 +25,4 @@ pipeline {
             }
         }
     }
-    
-    post {
-        always {
-            cleanWs()
-            docker.image(env.DOCKER_IMAGE_NAME).stop()
-            docker.image(env.DOCKER_IMAGE_NAME).remove()
-        }
-    }
 }
