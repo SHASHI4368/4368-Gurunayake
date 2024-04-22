@@ -24,12 +24,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            echo 'Cleaning up docker containers'
-            bat 'docker stop app-backend'
-            bat 'docker rm app-backend'
-        }
-    }
 }
