@@ -20,7 +20,7 @@ pipeline {
         
         stage('Run Docker Image') {
             steps {
-                bat 'docker run -p 5000:5000 app-backend'
+                bat 'docker run -d -p 5000:5000 app-backend'
             }
         }
     }
